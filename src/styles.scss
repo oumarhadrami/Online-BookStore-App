@@ -1,9 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
 @font-face{
-    font-family: 'Yusei Magic';
-    src: url(\assets\fonts\Yusei_Magic\YuseiMagic-Regular.ttf);
+    font-family: 'Open Sans';
+    src: url(\assets\fonts\Open_Sans\OpenSans-Light.ttf);
+    font-weight: lighter;
+}
+
+@font-face{
+    font-family: 'Open Sans';
+    src: url(\assets\fonts\Open_Sans\OpenSans-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face{
+    font-family: 'Open Sans';
+    src: url(\assets\fonts\Open_Sans\OpenSans-Bold.ttf);
+    font-weight: bold;
 }
 
 body{
-    font-family: 'Yusei Magic';
+    font-family: 'Open Sans';
+    padding-top: 56px;
 }
