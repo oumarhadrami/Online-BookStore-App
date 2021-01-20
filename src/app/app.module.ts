@@ -9,9 +9,10 @@ import { from } from 'rxjs';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { BookCategoryComponent } from './components/book-category/book-category.component';
 import { SearchComponent } from './components/search/search.component';
+import { BookDetailsComponent } from './components/book-details/book-details.component';
 
 @NgModule({
-  declarations: [AppComponent, BookListComponent, PageNotFoundComponent, BookCategoryComponent, SearchComponent],
+  declarations: [AppComponent, BookListComponent, PageNotFoundComponent, BookCategoryComponent, SearchComponent, BookDetailsComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

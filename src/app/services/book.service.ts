@@ -10,31 +10,30 @@ import { BookCategory } from '../common/book-category';
 })
 export class BookService {
   private baseUrl = 'http://localhost:8080/api/v1/books';
-  private categoryUrl = 'http://localhost:8080/api/v1/book-category'
+  private categoryUrl = 'http://localhost:8080/api/v1/book-category';
 
   constructor(private httpClient: HttpClient) {}
 
-  getBooks(currentCategoryId : number): Observable<Book[]> {
+  getBooks(currentCategoryId: number): Observable<Book[]> {
     const searchUrl = `${this.baseUrl}/search/category_id?id=${currentCategoryId}`;
     return this.fetchBooksList(searchUrl);
   }
 
-  
-
-  getBookCategories() : Observable<BookCategory[]>{
-    return this.httpClient
-    .get<ResponeBookCategory>(this.categoryUrl)
-    .pipe(map((response) => response._embedded.bookCategory));
+  getBook(bookId: number): Observable<Book> {
+    const bookDetailsUrl = `${this.baseUrl}/${bookId}`;
+    return this.httpClient.get<Book>(bookDetailsUrl);
   }
 
+  getBookCategories(): Observable<BookCategory[]> {
+    return this.httpClient
+      .get<ResponeBookCategory>(this.categoryUrl)
+      .pipe(map((response) => response._embedded.bookCategory));
+  }
 
-  getSearchedBooksWithThisKeyword(keyword : string): Observable<Book[]> {
+  getSearchedBooksWithThisKeyword(keyword: string): Observable<Book[]> {
     const searchUrl = `${this.baseUrl}/search/search_by_keyword?keyword=${keyword}`;
     return this.fetchBooksList(searchUrl);
   }
-
-
-
 
   private fetchBooksList(searchUrl: string): Observable<Book[]> {
     return this.httpClient
