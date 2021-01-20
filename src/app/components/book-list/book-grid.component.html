@@ -1,12 +1,7 @@
 <div class="row">
   <div class="col-lg-3">
     <br />
-    <div class="list-group">
-      <a routerLink="/category/1" routerLinkActive="bg-primary text-white font-weight-bold" class="list-group-item">Web Development</a>
-      <a routerLink="/category/2" routerLinkActive="bg-primary text-white font-weight-bold" class="list-group-item">Programming</a>
-      <a routerLink="/category/3" routerLinkActive="bg-primary text-white font-weight-bold" class="list-group-item">Databases</a>
-      <a routerLink="/category/4" routerLinkActive="bg-primary text-white font-weight-bold" class="list-group-item">Administration</a>
-    </div>
+    <app-book-category></app-book-category>
   </div>
   <!-- /.col-lg-3 -->
 
@@ -32,6 +27,10 @@
             <button class="btn btn-primary float-right">Add to Cart</button>
           </div>
         </div>
+      </div>
+
+      <div *ngIf="books.length == 0" class="col-md-12 alert alert-warning">
+        <h5>No Books Found</h5>
       </div>
     </div>
     
