@@ -21,6 +21,6 @@ export class BookDetailsComponent implements OnInit {
 
   getBookInfo() {
     const bookId = Number(this.activatedRoute.snapshot.paramMap.get('id'));
-    this.bookService.getBook(bookId).subscribe((data) => this.book =data);
+    this.bookService.getBook(bookId).subscribe((data) => (this.book = data));
   }
 }
