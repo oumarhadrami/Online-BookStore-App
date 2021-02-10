@@ -1,5 +1,5 @@
 export class Book {
-    id: number | undefined;
+    id: string | undefined;
     sku: string | undefined;
     name: string | undefined;
     description: string | undefined;

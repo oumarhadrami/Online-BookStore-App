@@ -48,4 +48,9 @@ export class BookListComponent implements OnInit {
       .getBooks(this.currentCategoryId)
       .subscribe((data) => (this.books = data));
   }
+
+
+  addToCart(book: Book){
+    console.log(book);
+  }
 }
