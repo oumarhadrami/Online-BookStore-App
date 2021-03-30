@@ -9,8 +9,8 @@ import { BookCategory } from '../common/book-category';
   providedIn: 'root',
 })
 export class BookService {
-  private baseUrl = 'http://139.59.190.137/online_bookstore_api/api/v1/books';
-  private categoryUrl = 'http://139.59.190.137/online_bookstore_api/api/v1/book-category';
+  private baseUrl = 'https://tutorials-rest-api.herokuapp.com/online_bookstore_api/api/v1/books';
+  private categoryUrl = 'https://tutorials-rest-api.herokuapp.com/online_bookstore_api/api/v1/book-category';
 
   constructor(private httpClient: HttpClient) {}
 
