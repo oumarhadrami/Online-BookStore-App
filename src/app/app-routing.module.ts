@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: 'category/:id', component: BookListComponent },
   { path: 'search/:keyword', component: BookListComponent },
   { path: '', component: BookListComponent },
+  { path: 'books', component: BookListComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 
